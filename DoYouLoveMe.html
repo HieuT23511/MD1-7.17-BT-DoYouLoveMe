@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoYouLoveMe</title>
+</head>
+<body>
+<h2> DO YOU LOVE ME?</h2>
+<button type="button" id="clickYes"> Yes</button>
+<button type="button" id="clickNo"> No</button>
+<script>
+    let clickYes = document.getElementById('clickYes');
+    let clickNo = document.getElementById('clickNo');
+    clickYes.addEventListener("click", YesIdo);
+    clickNo.addEventListener("mouseover", CantNo);
+
+    function YesIdo() {
+        alert('Wonderful! Because U are apple of my eye <3')
+    }
+    function CantNo() {
+        let x = Math.round(Math.random() * window.innerWidth);
+        let y = Math.round(Math.random() * window.innerHeight);
+        clickNo.style.left = x + 'px';
+        clickNo.style.top = y + 'px';
+    }
+    function init() {
+        clickNo.style.width = '40px';
+        clickNo.style.position = 'absolute';
+        clickNo.style.top = '';
+        clickNo.style.left = '60px';
+    }
+    window.onload = init;
+</script>
+</body>
+</html>
